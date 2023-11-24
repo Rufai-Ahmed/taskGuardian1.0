@@ -9,6 +9,7 @@ import { FreemoRegister } from "../Pages/Auth/FreemoRegister";
 import { BromoRegister } from "../Pages/Auth/BromoRegister";
 import { Pricing } from "../Pages/Pricing";
 import { DashBoardLayout } from "../Pages/Dashboard/DashboardLayout";
+import { Upgrade } from "../Pages/Upgrade";
 
 export const Router = createBrowserRouter([
   {
@@ -50,7 +51,10 @@ export const Router = createBrowserRouter([
     path: "/pricing",
     element: <Pricing />,
   },
-
+  {
+    path: "/upgrade/:plan",
+    element: <Upgrade />,
+  },
   {
     path: "/dashboard/:userID",
     element: <DashBoardLayout />,

@@ -52,3 +52,24 @@ export const viewUser = async (ID: string) => {
     return error;
   }
 };
+
+export const toBromo = async (Data: any) => {
+  try {
+    return await axios.patch(`${URL}/updateToBromo`, Data).then((res: any) => {
+      return res.data;
+    });
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};
+export const toPremo = async (Data: any) => {
+  try {
+    return await axios.patch(`${URL}/updateToPremo`, Data).then((res: any) => {
+      return res.data;
+    });
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};

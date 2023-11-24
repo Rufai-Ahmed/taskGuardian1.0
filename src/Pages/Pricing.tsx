@@ -11,6 +11,8 @@ export const Pricing = () => {
     setToggle(!toggle);
   };
 
+  const storage = JSON.parse(localStorage.getItem("user")!);
+
   return (
     <div>
       <Header />
@@ -45,99 +47,205 @@ export const Pricing = () => {
           </div>
         </div>
         <div className="w-full flex flex-wrap justify-center ">
-          <div className="border p-8 h-[750px] w-[430px] ">
-            <div className="font-bold text-[30px] mb-3 mt-3 ">Freemo</div>
-            <div className="w-full text-md  ">
-              Team up with your colleagues around your APIs.
-            </div>
+          {storage && storage?.data?.plan === "freemo" ? (
+            <>
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Bromo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
 
-            <div className="mt-[25px]  ">
-              <div className="text-[28px] font-bold ">
-                {toggle ? "$14" : "$40"}
-              </div>
-              <div>Per user/month, billed annually</div>
-            </div>
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$24" : "$45"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
 
-            <Link to="/freemoRegister">
-              <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
-                Register Now
-              </button>
-            </Link>
+                <Link to={storage ? "/upgrade/bromo" : "/bromoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
 
-            <div>
-              <div>Highlights of plan features:</div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
-              </div>
-            </div>
-          </div>
-          <div className="border p-8 h-[750px] w-[430px] ">
-            <div className="font-bold text-[30px] mb-3 mt-3 ">Bromo</div>
-            <div className="w-full text-md  ">
-              Team up with your colleagues around your APIs.
-            </div>
 
-            <div className="mt-[25px]  ">
-              <div className="text-[28px] font-bold ">
-                {toggle ? "$14" : "$40"}
-              </div>
-              <div>Per user/month, billed annually</div>
-            </div>
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Premo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
 
-            <Link to="/bromoRegister">
-              <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
-                Register Now
-              </button>
-            </Link>
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$34" : "$50"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
 
-            <div>
-              <div>Highlights of plan features:</div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
-              </div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
-              </div>
-            </div>
-          </div>
-          <div className="border p-8 h-[750px] w-[430px] ">
-            <div className="font-bold text-[30px] mb-3 mt-3 ">Premo</div>
-            <div className="w-full text-md  ">
-              Team up with your colleagues around your APIs.
-            </div>
+                <Link to={storage ? "/upgrade/premo" : "/premoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
 
-            <div className="mt-[25px]  ">
-              <div className="text-[28px] font-bold ">
-                {toggle ? "$14" : "$40"}
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
               </div>
-              <div>Per user/month, billed annually</div>
-            </div>
+            </>
+          ) : storage?.data?.plan === "bromo" ? (
+            <>
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Premo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
 
-            <Link to="/premoRegister">
-              <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
-                Register Now
-              </button>
-            </Link>
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$34" : "$50"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
 
-            <div>
-              <div>Highlights of plan features:</div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
+                <Link to={storage ? "/upgrade/premo" : "/premoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
+
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-5 items-center mt-1 ">
-                <IoCheckmark className="text-green-800 text-xl font-bold " />
-                Unlimited collaboration for plan members
+            </>
+          ) : (
+            <>
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Freemo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
+
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$14" : "$40"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
+
+                <Link to={storage ? "/upgrade/bromo" : "/freemoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
+
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Bromo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
+
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$24" : "$45"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
+
+                <Link to={storage ? "/upgrade/bromo" : "/bromoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
+
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
+              </div>
+
+              <div className="border p-8 h-[750px] w-[430px] ">
+                <div className="font-bold text-[30px] mb-3 mt-3 ">Premo</div>
+                <div className="w-full text-md  ">
+                  Team up with your colleagues around your APIs.
+                </div>
+
+                <div className="mt-[25px]  ">
+                  <div className="text-[28px] font-bold ">
+                    {toggle ? "$34" : "$50"}
+                  </div>
+                  <div>Per user/month, billed annually</div>
+                </div>
+
+                <Link to={storage ? "/upgrade/bromo" : "/premoRegister"}>
+                  <button className="p-3 text-white bg-orange-600 font-bold my-10 w-full text-[20px] rounded-lg ">
+                    {storage ? "Upgrade Now" : "Register Now"}
+                  </button>
+                </Link>
+
+                <div>
+                  <div>Highlights of plan features:</div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                  <div className="flex gap-5 items-center mt-1 ">
+                    <IoCheckmark className="text-green-800 text-xl font-bold " />
+                    Unlimited collaboration for plan members
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         <div className="w-full py-10 flex items-center justify-center flex-col ">
           <div className=" text-[30px]  ">
@@ -181,7 +289,7 @@ export const Pricing = () => {
 
                 <div className="flex w-full gap-5 items-center ">
                   <div className=" w-[120px] flex items-center justify-center rounded-md h-12 text-[18px] my-8 text-white  bg-orange-600  ">
-                    Register Now
+                    {storage ? "Upgrade Now" : "Register Now"}
                   </div>
                   <div className="text-blue-700 text-[24px] flex items-center gap-2 w-[70%]   ">
                     Learn More <LuArrowRight />
