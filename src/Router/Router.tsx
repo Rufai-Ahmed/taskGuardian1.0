@@ -25,7 +25,6 @@ export const Router = createBrowserRouter([
         element: <HomeScreen />,
       },
       {
-        index: true,
         path: "/dark",
         element: <HomeScreen />,
       },

@@ -16,7 +16,7 @@ export const Header = () => {
 
   return (
     <div>
-      <div className=" z-10 fixed bg-white flex w-full h-[70px] border-b items-center justify-center py-[40px] ">
+      <div className=" z-10 fixed bg-white flex w-full h-[80px] border-b top-0 items-center justify-center  ">
         <div className="flex justify-between w-[96%] ">
           <div>
             <img src={logo} className="w-[100px] " />
@@ -67,7 +67,6 @@ export const Header = () => {
           </div>
         </div>
       </div>
-
       {toggle && toggle ? (
         <div className="w-[400px] h-[200px] bg-white shadow-md border rounded-md absolute right-[13%] top-[10%]  ">
           <div className="flex mt-6 ">
