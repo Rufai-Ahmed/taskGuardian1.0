@@ -9,8 +9,22 @@ import {
   MdQuestionMark,
   MdSettings,
 } from "react-icons/md";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { TypeAnimation } from "react-type-animation";
+import {
+  FaAngleDown,
+  FaAngleUp,
+  FaGithub,
+  FaLinkedin,
+  FaTwitch,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import paypal from "../Assets/www.postman.com_pricing_.png";
+import meta from "../Assets/www.postman.com_pricing_ (1).png";
+import salesforce from "../Assets/www.postman.com_pricing_ (2).png";
+import bestBuy from "../Assets/www.postman.com_pricing_ (3).png";
+import lauder from "../Assets/www.postman.com_pricing_ (4).png";
+import philips from "../Assets/www.postman.com_pricing_ (5).png";
+import postman from "../Assets/postman-footer-rocket-launch.svg";
 
 export const Pricing = () => {
   const [toggle, setToggle] = useState(true);
@@ -1310,12 +1324,25 @@ export const Pricing = () => {
             </div>
           </div>
 
-          <div className="w-full mt-20 flex justify-evenly flex-wrap  ">
-            <div className="bg-red-200 w-[100px] h-[40px] "></div>
-            <div className="bg-red-200 w-[100px] h-[40px] "></div>
-            <div className="bg-red-200 w-[100px] h-[40px] "></div>
-            <div className="bg-red-200 w-[100px] h-[40px] "></div>
-            <div className="bg-red-200 w-[100px] h-[40px] "></div>
+          <div className="w-full my-32 flex justify-evenly flex-wrap  ">
+            <div className=" w-[130px] h-[40px] ">
+              <img src={paypal} alt="" className="w-[100%]" />
+            </div>
+            <div className=" w-[130px] h-[40px] ">
+              <img src={meta} alt="" className="w-[100%]" />
+            </div>
+            <div className=" w-[130px] h-[40px] ">
+              <img src={salesforce} alt="" className="w-[100%]" />
+            </div>
+            <div className=" w-[130px] h-[40px] ">
+              <img src={bestBuy} alt="" className="w-[100%]" />
+            </div>
+            <div className=" w-[130px] h-[40px] ">
+              <img src={lauder} alt="" className="w-[100%]" />
+            </div>
+            <div className=" w-[130px] h-[40px] ">
+              <img src={philips} alt="" className="w-[100%]" />
+            </div>
           </div>
 
           <div className="w-full mt-20  flex justify-center gap-5 ">
@@ -1331,7 +1358,7 @@ export const Pricing = () => {
           className="w-full  flex flex-col items-center
           "
         >
-          <div className="w-[70%] py-10 border-t text-[30px] font-bold  ">
+          <div className="w-[70%] py-20 pb-32 border-t text-[30px] font-bold  ">
             Case studies
             <div className=" w-[60%] text-[18px] font-normal  ">
               See a wide selection of detailed use cases from nearly every
@@ -1366,7 +1393,151 @@ export const Pricing = () => {
           </div>
         </div>
 
-        <div className="w-full h-[70vh] border-t  "></div>
+        <div className="w-full h-[75vh] border-t flex items-center  ">
+          <div className="w-[35%] h-full flex items-center justify-center flex-col  ">
+            <img src={postman} className="w-[30%]  " alt="" />
+            <div className="text-[13px] mt-5 text-gray-500 ">
+              © 2023 Postman, Inc.
+            </div>
+          </div>
+          <div className="w-[65%] h-full flex items-center ">
+            <div className="flex">
+              <div className="mr-10 text-[20px] text-gray-500 font-bold ">
+                Product
+                <div className="mr-10 text-[14px] font-normal ">
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    What is Postman?
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    API repository
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Tools
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Governance
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Workspaces
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Integrations
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Enterprise
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Plans and pricing
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Download the app
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Support Center
+                  </div>
+                </div>
+              </div>
+
+              <div className="mr-10 text-[20px] text-gray-500 font-bold ">
+                Company
+                <div className="mr-10 text-[14px] font-normal ">
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    What is Postman?
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    API repository
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Tools
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Governance
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Workspaces
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Integrations
+                  </div>
+                </div>
+                <div className="mr-10 mt-10 text-[20px] text-gray-500 font-bold ">
+                  Legal and Security
+                  <div className="mr-10 text-[14px] font-normal ">
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      What is Postman?
+                    </div>
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      API repository
+                    </div>
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      Tools
+                    </div>
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      Governance
+                    </div>
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      Workspaces
+                    </div>
+                    <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                      Integrations
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mr-10 text-[20px] text-gray-500 font-bold ">
+                API Categories
+                <div className="mr-10 text-[14px] font-normal ">
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    What is Postman?
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    API repository
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Tools
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Governance
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Workspaces
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Integrations
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Lorem.
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 ">
+                    Lorem, ipsum.
+                  </div>
+                </div>
+              </div>
+
+              <div className="mr-10 text-[20px] text-gray-500 font-bold ">
+                Social
+                <div className="mr-10 text-[14px] font-normal ">
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 flex gap-5 ">
+                    <FaTwitter /> Twitter
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 flex gap-5 ">
+                    <FaLinkedin /> LinkedIn
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 flex gap-5 ">
+                    <FaGithub /> GitHub
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 flex gap-5 ">
+                    <FaYoutube /> YouTube
+                  </div>
+                  <div className="my-[7px] cursor-pointer hover:text-blue-500 flex gap-5 ">
+                    <FaTwitch /> Twitch
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

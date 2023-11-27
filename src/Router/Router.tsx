@@ -10,6 +10,7 @@ import { BromoRegister } from "../Pages/Auth/BromoRegister";
 import { Pricing } from "../Pages/Pricing";
 import { DashBoardLayout } from "../Pages/Dashboard/DashboardLayout";
 import { Upgrade } from "../Pages/Upgrade";
+import { Projects } from "../Pages/Dashboard/Projects";
 
 export const Router = createBrowserRouter([
   {
@@ -55,7 +56,18 @@ export const Router = createBrowserRouter([
     element: <Upgrade />,
   },
   {
-    path: "/dashboard/:userID",
+    path: "/dashboard/:userID/:projectID",
     element: <DashBoardLayout />,
+    children: [
+      {
+        index: true,
+        element: <Projects />,
+      },
+    ],
+  },
+  {
+    path: "/projects",
+    index: true,
+    element: <Projects />,
   },
 ]);

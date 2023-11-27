@@ -105,7 +105,7 @@ export const Login = () => {
             </button>
             <div className="text-[12px] mt-2 text-center  ">
               Don't have an account?
-              <Link to="/register">
+              <Link to="/freemoRegistersrc/Pages/Pricing.tsx">
                 <strong className="text-purple-900">Sign up here</strong>
               </Link>
             </div>
